@@ -1,0 +1,62 @@
+<div class = "jumbotron jumbotron-fluid title-jumbotron py-3">
+    <div class = "container">
+        <div class = "row justify-content-center">
+            <div class = "col-auto mx-auto transparent">
+                <h1 class = "display-4">eat da burger!</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = "container">
+    <div class = "row justify-content-center">
+        <div class = "col-auto py-1 transparent-2">
+            <form class = "burger-form">
+                <div class = "form-inline">
+                    {{!-- <input type = "text" id = "customer-name" class = "form-control mr-3" name = "name" placeholder = "Your Name Here"> --}}
+                    <button type = "submit" class = "btn burger-button mr-3">Add a Burger</button>
+                    <input type = "text" id = "burger-name" class = "form-control" name = "name" placeholder = "Burger Name">
+                </div>
+                <span id = "warning-message"></span>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class = "container-fluid">
+    <div class = "row justify-content-center">
+        <div class = "col-sm-8 col-lg-4 transparent-2 m-2">
+            <h2>burgers to eat</h2>
+            <hr>
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                            {{> burger-block devoured=false}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class = "col-sm-8 col-lg-4 transparent-2 m-2">
+            <h2>burgers i has eaten.</h2>
+            <hr>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                            {{> burger-block devoured=true}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class = "container">
+    <div class = "row justify-content-center">
+        <div class = "col-auto py-1 transparent-2">
+            <div class = "row justify-content-center">
+                <div class = "col-auto m-1 p-1 transparent">
+                    Copyright &copy; 2019 Bryan Bloomquist
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+body {
+    font-family: "Margarine", cursive;
+    background-image: url("../img/bf-tile.jpg");
+}
+
+hr {
+    background-color: #683;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.title-jumbotron {
+    background-image: url("../img/burger-background.png");
+    background-size: cover;
+    border-bottom: 5px ridge #ad7;
+}
+
+.transparent {
+    background: rgba(196,108,208,0.7);
+    border: 5px ridge #c7d;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 3px 3px #838;
+}
+
+.transparent-2 {
+    background: rgba(157,207,108,0.7);
+    border: 5px ridge #ad7;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 2px 2px #683;
+}
+
+.burger-button {
+    background-color: #c7d;
+    color: #fff;
+    text-shadow: 1px 1px #838;
+    border: 1px solid #838;
+}
