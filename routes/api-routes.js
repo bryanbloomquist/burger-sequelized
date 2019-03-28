@@ -9,6 +9,9 @@ module.exports = function(app) {
             query.CustomerId = req.query.customer_id;
         }
         db.Burger.findAll({
+            order: [
+                ["burger_name"]
+            ]
             // where: query,
             // include: [db.Customer]
         }).then(function(dbBurger) {
