@@ -1,6 +1,6 @@
 var db = require("../models");
 
-module.explorts = function(app) {
+module.exports = function(app) {
     app.get("/api/customers", function(req, res) {
         db.Customer.findaAll({
             include: [db.Burger]
